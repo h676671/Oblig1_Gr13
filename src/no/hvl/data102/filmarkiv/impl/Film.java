@@ -1,4 +1,4 @@
-package main.java.no.hvl.data102.filmarkiv.impl;
+package no.hvl.data102.filmarkiv.impl;
 
 import java.util.Objects;
 

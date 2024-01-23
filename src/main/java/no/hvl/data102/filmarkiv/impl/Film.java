@@ -1,4 +1,4 @@
-package no.hvl.data102.filmarkiv.impl;
+package main.java.no.hvl.data102.filmarkiv.impl;
 
 public class Film {
     private int filmNr;
@@ -9,7 +9,7 @@ public class Film {
     private String filmSelskap;
 
     public Film() {
-        this(0,"","",0,"","");
+        this(0,"","",0,null,"");
     }
 
     public Film(int filmNr, String filmSkaper, String tittel, int utgivelse, Enum sjanger, String filmSelskap) {

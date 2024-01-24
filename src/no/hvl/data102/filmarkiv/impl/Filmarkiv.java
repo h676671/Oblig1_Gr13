@@ -52,14 +52,10 @@ public class Filmarkiv implements FilmarkivADT {
     @Override
     public Film[] soekTittel(String delstreng) {
 
-        Film[] film = new Film[antall];
-        for (int i = 0; i < film.length; i++ ) {
-
-            //Sjekker om filmen har samme tittel som "delstreng"
-
-            if (film[i] ) {
-                return new Film[i];
-            }
+        for (Film film : arkiv) {
+           if (film.getTittel().equals(delstreng)) {
+               return new Film[]{film};
+           }
         }
 
         return new Film[0];
@@ -67,6 +63,12 @@ public class Filmarkiv implements FilmarkivADT {
 
     @Override
     public Film[] soekProdusent(String delstreng) {
+        for (Film film : arkiv) {
+            if (film.getFilmSkaper().equals(delstreng)) {
+                return new Film[]{film};
+            }
+        }
+
         return new Film[0];
     }
 

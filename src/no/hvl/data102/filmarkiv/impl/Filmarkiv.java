@@ -9,8 +9,9 @@ public class Filmarkiv implements FilmarkivADT {
     private ArrayList<Film> arkiv;
     private int antall;
 
-    /*
-    Konstruktør som oppretter et tomt film arkiv/init arrayList med Film som objekt
+    /**
+     * Konstruktør som oppretter et tomt film arkiv/init arrayList med Film som objekt
+     *
      */
     public Filmarkiv() {
         antall = 0;
@@ -80,5 +81,21 @@ public class Filmarkiv implements FilmarkivADT {
     @Override
     public int antall() {
         return 0;
+    }
+
+    /**
+     * Hjelpemetode som trimmer en tabell, slik at alle steder i tabellen har en referanse
+     * @param tab
+     * @param n
+     * @return
+     */
+    private Film[] trimTab(Film[] tab, int n) {
+        Film[] nytab = new Film[n];
+        int i = 0;
+        while (i < n) {
+            nytab[i] = tab[i];
+            i++;
+        }
+        return nytab;
     }
 }

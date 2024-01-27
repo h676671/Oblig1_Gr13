@@ -2,7 +2,7 @@ package no.hvl.data102.filmarkiv.impl;
 
 import no.hvl.data102.filmarkiv.adt.FilmarkivADT;
 import java.util.ArrayList;
-import java.util.Iterator;
+
 
 public class Filmarkiv implements FilmarkivADT {
 
@@ -75,19 +75,25 @@ public class Filmarkiv implements FilmarkivADT {
 
     @Override
     public int antall(Sjanger sjanger) {
-        return 0;
+        int antSjanger = 0;
+        for (Film film : arkiv) {
+            if(film.getSjanger().equals(sjanger)){
+                antSjanger++;
+            }
+        }
+        return antSjanger;
     }
 
     @Override
     public int antall() {
-        return 0;
+        return arkiv.size();
     }
 
     /**
      * Hjelpemetode som trimmer en tabell, slik at alle steder i tabellen har en referanse
-     * @param tab
-     * @param n
-     * @return
+     * @param tab tabellen
+     * @param n posisjon
+     * @return trimmet tabell
      */
     private Film[] trimTab(Film[] tab, int n) {
         Film[] nytab = new Film[n];

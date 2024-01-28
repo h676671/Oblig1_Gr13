@@ -1,4 +1,55 @@
-package no.hvl.data102.filmarkiv.test;
+import org.junit.jupiter.api.Test;
 
-public class FilmarkivTest {
+import static org.junit.jupiter.api.Assertions.*;
+
+class FilmarkivTest {
+
+    @Test
+    void finnFilm() {
+
+
+
+    }
+
+    @Test
+    void leggTilFilm() {
+
+
+
+    }
+
+    @Test
+    void slettFilm() {
+
+
+
+    }
+
+    @Test
+    void soekTittel() {
+
+
+
+    }
+
+    @Test
+    void soekProdusent() {
+
+
+
+    }
+
+    @Test
+    void antall() {
+
+
+
+    }
+
+    @Test
+    void testAntall() {
+
+
+
+    }
 }

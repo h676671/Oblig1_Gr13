@@ -1,6 +1,8 @@
 package no.hvl.data102.filmarkiv.impl;
 
 import no.hvl.data102.filmarkiv.adt.FilmarkivADT;
+
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 
@@ -53,24 +55,33 @@ public class Filmarkiv implements FilmarkivADT {
     @Override
     public Film[] soekTittel(String delstreng) {
 
+        //ArrayList slik at vi kan få flere filmer med lignenede tittel
+        ArrayList<Film> resultater = new ArrayList<>();
+
         for (Film film : arkiv) {
            if (film.getTittel().equals(delstreng)) {
-               return new Film[]{film};
+               resultater.add(film);
            }
         }
 
-        return new Film[0];
+        //Gjør ArrayListen om til en tabell go trimmer listen slik at den er full.
+        return resultater.toArray(trimTab(new Film[0], resultater.size()));
     }
 
     @Override
     public Film[] soekProdusent(String delstreng) {
+
+        //ArrayList slik at vi kan få flere filmer med lignenede tittel
+        ArrayList<Film> resultater = new ArrayList<>();
+
         for (Film film : arkiv) {
             if (film.getFilmSkaper().equals(delstreng)) {
-                return new Film[]{film};
+                resultater.add(film);
             }
         }
 
-        return new Film[0];
+        //Gjør ArrayListen om til en tabell go trimmer listen slik at den er full.
+        return resultater.toArray(trimTab(new Film[0], resultater.size()));
     }
 
     @Override

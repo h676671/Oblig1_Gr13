@@ -7,14 +7,14 @@ public class Film {
     private String filmSkaper;
     private String tittel;
     private int utgivelse;
-    private Enum sjanger;
+    private Sjanger sjanger;
     private String filmSelskap;
 
     public Film() {
         this(0,"","",0,null,"");
     }
 
-    public Film(int filmNr, String filmSkaper, String tittel, int utgivelse, Enum sjanger, String filmSelskap) {
+    public Film(int filmNr, String filmSkaper, String tittel, int utgivelse, Sjanger sjanger, String filmSelskap) {
 
         this.filmNr = filmNr;
         this.filmSkaper = filmSkaper;
@@ -53,10 +53,10 @@ public class Film {
         return this.utgivelse;
     }
 
-    public void setSjanger(Enum sjanger) {
+    public void setSjanger(Sjanger sjanger) {
         this.sjanger = sjanger;
     }
-    public Enum getSjanger() {
+    public Sjanger getSjanger() {
         return this.sjanger;
     }
 

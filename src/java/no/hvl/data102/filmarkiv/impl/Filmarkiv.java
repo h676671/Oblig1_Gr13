@@ -1,8 +1,7 @@
-package no.hvl.data102.filmarkiv.impl;
+package java.no.hvl.data102.filmarkiv.impl;
 
-import no.hvl.data102.filmarkiv.adt.FilmarkivADT;
+import java.no.hvl.data102.filmarkiv.adt.FilmarkivADT;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 
